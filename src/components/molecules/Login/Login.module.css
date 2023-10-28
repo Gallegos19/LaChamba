@@ -52,12 +52,14 @@
     .containerLogin{
         height: auto;
         flex-wrap: wrap;
+        margin-top: 15%;
     }
 }
 @media screen and (max-width:649px){
     .containerLogin{
         width: 17rem;
         height: auto;
+        margin-top: 15%;
     }
     .title{
         margin-bottom: 0;

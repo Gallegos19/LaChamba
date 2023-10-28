@@ -1,12 +1,13 @@
 import React from 'react';
 import style from './Login.module.css'
-import Title from '../../atoms/Title/Title';
-import Input from '../../atoms/Input/Input';
-import Button from '../../atoms/button/Button';
-import Text from '../../atoms/Text/Text';
+import Title from '../../Title/Title';
+import Input from '../../Input/Input';
+import Button from '../../button/Button';
+import Text from '../../Text/Text';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-
+  const navigate = useNavigate();
   function IniciarSesion(e){
     
       console.log("Hola")
@@ -23,10 +24,10 @@ export default function Login() {
         <Input tipo='email' name='Correo' />
         <Input tipo='password' name='Contraseña' />
         </div>
-        <div className={style.boton}>
+        <div className={style.boton} onClick={() => navigate("/")}>
         <Button nombre='Ingresar' />
         </div>
-        <div>
+        <div onClick={() => navigate("/register")}>
           <Text text='¿No tienes cuenta? Registrate aqui'/>
         </div>
     </form>

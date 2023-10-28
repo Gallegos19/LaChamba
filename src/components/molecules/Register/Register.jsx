@@ -1,12 +1,15 @@
 import React from 'react';
 import style from './Register.module.css';
-import Title from '../../atoms/Title/Title';
-import Input from '../../atoms/Input/Input';
-import Button from '../../atoms/button/Button';
-import Text from '../../atoms/Text/Text';
+import Title from '../../Title/Title';
+import Input from '../../Input/Input';
+import Button from '../../button/Button';
+import Text from '../../Text/Text';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Register() {
+  const navigate = useNavigate();
+
   return (
     <form className={style.containerRegister}>
            <div className={style.title}>
@@ -21,7 +24,7 @@ export default function Register() {
         <Input tipo='password' name='Contraseña' />
         <Input tipo='password' name='Confirmar Contraseña' />
         </div>
-        <div className={style.boton}>
+        <div className={style.boton} onClick={() => navigate("/")}>
         <Button nombre='Ingresar' />
         </div>
     </form>
